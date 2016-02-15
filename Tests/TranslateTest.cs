@@ -33,6 +33,19 @@ namespace LeetSpeak
       //Assert
       Assert.Equal(newTranslator, returnString);
     }
+    [Fact]
+    public void Test3LetterCapitalIReplaceWith1()
+    {
+      //Arrange
+      string input = "India";
+      string returnString = "1ndia";
+
+      //Act
+      string newTranslator = Translator.Translate(input);
+
+      //Assert
+      Assert.Equal(newTranslator, returnString);
+    }
 
 
   }
