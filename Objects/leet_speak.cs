@@ -1,29 +1,23 @@
+using System;
 using System.Collections.Generic;
 
 namespace LeetSpeak
 {
-  public class Sentence
+  public class Translator
   {
-    //code goes here
-    private string _userPhrase;
-
-    public Sentence(string userPhrase)
+    public static string Translate(string input)
     {
-      _userPhrase = userPhrase;
+      //code goes here
+      char[] array = input.ToCharArray();
+      for (int i = 0; i <array.Length; i++)
+      {
+        if (array[i] == Convert.ToChar('e'))
+        {
+         array[i] = Convert.ToChar("3");
+        }
+      }
+      string result = string.Join("", array);
+      return result;
     }
-
-    public string GetUserPhrase()
-    {
-      return _userPhrase;
-    }
-    public void SetUserPhrase(string userPhrase)
-    {
-      _userPhrase = userPhrase;
-    }
-
-    // public static Translate(Sentence userPhrase)
-    // {
-    //   return userPhrase;
-    // }
   }
 }
