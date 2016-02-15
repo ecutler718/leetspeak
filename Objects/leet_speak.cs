@@ -15,6 +15,9 @@ namespace LeetSpeak
         {
          array[i] = Convert.ToChar("3");
         }
+        else if (array[i] == Convert.ToChar("o")) {
+              array[i] = Convert.ToChar("0");
+        }
       }
       string result = string.Join("", array);
       return result;

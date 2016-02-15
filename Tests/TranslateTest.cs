@@ -20,6 +20,19 @@ namespace LeetSpeak
       //Assert
       Assert.Equal(newTranslator, returnString);
     }
+    [Fact]
+    public void Test2LetterOReplaceWith0()
+    {
+      //Arrange
+      string input = "woof";
+      string returnString = "w00f";
+
+      //Act
+      string newTranslator = Translator.Translate(input);
+
+      //Assert
+      Assert.Equal(newTranslator, returnString);
+    }
 
 
   }
