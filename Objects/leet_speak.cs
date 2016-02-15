@@ -21,6 +21,12 @@ namespace LeetSpeak
         else if (array[i] == Convert.ToChar("I")){
               array[i] = Convert.ToChar("1");
         }
+        else if (i>0) {
+         if ((array[i] == Convert.ToChar("s") || array[i] == Convert.ToChar("S")) && array[i-1]!= Convert.ToChar(" ") && array[i-1]!= Convert.ToChar("'"))
+         {
+           array[i] = Convert.ToChar("z");
+         }
+        }
       }
       string result = string.Join("", array);
       return result;

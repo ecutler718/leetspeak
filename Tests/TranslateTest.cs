@@ -46,6 +46,16 @@ namespace LeetSpeak
       //Assert
       Assert.Equal(newTranslator, returnString);
     }
+    [Fact]
+    public void Test4LetterNonFirstSREplaceWithZ()
+    {
+      string input = "Look at the strings";
+      string returnString = "L00k at th3 stringz";
+
+      string newTranslator = Translator.Translate(input);
+
+      Assert.Equal(newTranslator, returnString);
+    }
 
 
   }
